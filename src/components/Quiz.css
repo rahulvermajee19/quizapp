@@ -1,0 +1,75 @@
+.quiz-wrapper {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.quiz-progress {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quiz-progress .step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  color: #ccc;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.quiz-progress .step.active {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #fff;
+}
+
+.question-box {
+  background-color: #ffc107;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.option-box {
+  background: #e0e0e0;
+  padding: 15px 25px;
+  border-radius: 8px;
+  min-width: 150px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.option-box:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.option-box.selected {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.timer-icon {
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ffcd39;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #000;
+}

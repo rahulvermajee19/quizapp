@@ -1,0 +1,42 @@
+.auth-container {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #f9d423, #ff4e50);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+  opacity: 0.95;
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .btn-google {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auth-container .row {
+    flex-direction: column;
+  }
+
+  .auth-container .col-md-6 {
+    text-align: center;
+  }
+
+  .auth-container .col-md-6 img {
+    width: 80% !important;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+/* src/components/Form.css */
+.form-wrapper {
+  max-width: 800px;
+}
+
+.form-title {
+  color: #333;
+  font-weight: 600;
+}
+
+.btn-warning {
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+  border: none;
+}
+
+.btn-warning:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 0 15px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}
