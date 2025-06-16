@@ -4,13 +4,12 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyA3lYGzIgi2T8n1LI7N8fB-VAQHRIX94ec",
-  authDomain: "quizapp-4824f.firebaseapp.com",
-  projectId: "quizapp-4824f",
-  storageBucket: "quizapp-4824f.firebasestorage.app",
-  messagingSenderId: "140731014003",
-  appId: "1:140731014003:web:67366a2d70278b321e8306",
-  measurementId: "G-VTMTZLGVSF"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
 };
 
 const app = initializeApp(firebaseConfig);
