@@ -9,7 +9,6 @@ const Form = ({ onNext }) => {
     firstName: "",
     lastName: "",
     grade: "",
-    exam: "",
     contact: "",
     isChaitanyaStudent: "",
   });
@@ -26,9 +25,9 @@ const Form = ({ onNext }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { firstName, lastName, grade, exam, contact, isChaitanyaStudent } = formData;
+    const { firstName, lastName, grade, contact, isChaitanyaStudent } = formData;
 
-    if (!firstName || !lastName || !grade || !exam || !contact || !isChaitanyaStudent) {
+    if (!firstName || !lastName || !grade || !contact || !isChaitanyaStudent) {
       setError("Please fill in all fields.");
       return;
     }
@@ -50,37 +49,37 @@ const Form = ({ onNext }) => {
     <div className="container my-5 form-wrapper">
       <div className="row justify-content-center">
         <div className="col-lg-8 col-md-10">
+          <h1 className="text-center mb-4">Admissions Open Now</h1>
           <div className="card shadow-sm p-4">
-            <h3 className="text-center mb-4 form-title">Enter Your Basic Details</h3>
+            <h5 className="text-center mb-4 form-title">Enter Your Basic Details</h5>
 
             {error && (
               <div className="alert alert-danger text-center">{error}</div>
             )}
 
             <form onSubmit={handleSubmit}>
-              <div className="row">
-                <div className="mb-3 col-md-6">
-                  <label className="form-label">First Name</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    className="form-control"
-                    placeholder="Enter First Name"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-3 col-md-6">
-                  <label className="form-label">Last Name</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    className="form-control"
-                    placeholder="Enter Last Name"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                  />
-                </div>
+              <div className="mb-3 col-md-6">
+                <label className="form-label">First Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  className="form-control"
+                  placeholder="Enter First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="mb-3 col-md-6">
+                <label className="form-label">Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  className="form-control"
+                  placeholder="Enter Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="row">
@@ -93,6 +92,11 @@ const Form = ({ onNext }) => {
                     onChange={handleChange}
                   >
                     <option value="">Select Grade</option>
+                    <option value="1">1st</option>
+                    <option value="2">2nd</option>
+                    <option value="3">3rd</option>
+                    <option value="4">4th</option>
+                    <option value="5">5th</option>
                     <option value="6">6th</option>
                     <option value="7">7th</option>
                     <option value="8">8th</option>
@@ -100,21 +104,6 @@ const Form = ({ onNext }) => {
                     <option value="10">10th</option>
                     <option value="11">11th</option>
                     <option value="12">12th</option>
-                  </select>
-                </div>
-                <div className="mb-3 col-md-6">
-                  <label className="form-label">Target Exam</label>
-                  <select
-                    name="exam"
-                    className="form-select"
-                    value={formData.exam}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select Exam</option>
-                    <option value="JEE">JEE</option>
-                    <option value="NEET">NEET</option>
-                    <option value="CUET">CUET</option>
-                    <option value="Other">Other</option>
                   </select>
                 </div>
               </div>
@@ -132,7 +121,7 @@ const Form = ({ onNext }) => {
               </div>
 
               <div className="mb-4">
-                <label className="form-label">Are you a Sri Chaitanya student?</label>
+                <label className="form-label">Are you a Kanchan Convent School student?</label>
                 <select
                   name="isChaitanyaStudent"
                   className="form-select"

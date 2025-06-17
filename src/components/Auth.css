@@ -1,42 +1,53 @@
-.auth-container {
+/* src/components/Auth.css */
+
+.auth-page {
   background-color: #ffffff;
-  color: #333;
+  padding-top: 40px;
+}
+
+.auth-logo {
+  height: 150px;
+  width: auto;
+}
+
+.auth-poster {
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .btn-google {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(to right, #f9d423, #ff4e50);
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   font-weight: 500;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 30px;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
 .btn-google:hover {
   opacity: 0.95;
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 576px) {
+  .auth-logo {
+    height: 120px;
+  }
+
   .btn-google {
-    width: 100%;
-    justify-content: center;
+    font-size: 14px;
   }
 
-  .auth-container .row {
-    flex-direction: column;
-  }
-
-  .auth-container .col-md-6 {
-    text-align: center;
-  }
-
-  .auth-container .col-md-6 img {
-    width: 80% !important;
-    margin-top: 20px;
+  .auth-poster {
+    max-width: 90%;
   }
 }
