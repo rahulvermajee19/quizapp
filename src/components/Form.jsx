@@ -46,12 +46,12 @@ const Form = ({ onNext }) => {
   };
 
   return (
-    <div className="container my-5 form-wrapper">
+    <div className="container form-wrapper">
       <div className="row justify-content-center">
+         <h1 className="text-center mb-4 p-3" style={{color:"#800000"}}>Admissions Open Now</h1>
         <div className="col-lg-8 col-md-10">
-          <h1 className="text-center mb-4">Admissions Open Now</h1>
           <div className="card shadow-sm p-4">
-            <h5 className="text-center mb-4 form-title">Enter Your Basic Details</h5>
+            <h5 className="text-center mb-5 form-title">Enter Your Basic Details</h5>
 
             {error && (
               <div className="alert alert-danger text-center">{error}</div>
